@@ -77,8 +77,6 @@ function writePassword() {
   if (correctPrompts) {
     var newPassword = generatePassword();
     passwordText.value = newPassword;
-  } else {
-    passwordText.value = "";
   }
 }
 function generatePassword() {
