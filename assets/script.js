@@ -75,15 +75,16 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   if (correctPrompts) {
-    var password = generatePassword();
+    var newPassword = generatePassword();
     passwordText.value = newPassword;
+  } else {
+    passwordText.value = "";
   }
 }
 function generatePassword() {
-  //would generate a password based on prompts
   var password = "";
   for (var i = 0; i < characterLength; i++) {
-    var randomLetter = Math.floor(Math.random() * choiceArr.lenghth);
+    var randomIndex = Math.floor(Math.random() * choiceArr.lenghth);
     password = password + choiceArr[randomIndex];
   }
 
